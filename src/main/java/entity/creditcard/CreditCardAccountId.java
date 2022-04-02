@@ -1,4 +1,4 @@
-package entity.CreditCard;
+package entity.creditcard;
 
 import java.util.ArrayList;
 

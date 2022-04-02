@@ -1,6 +1,6 @@
-package entity.Account;
+package entity.account;
 
-public class AccountDetails {
+public class Details {
     public String accountId;
     public String customerId;
     public String organizationId;

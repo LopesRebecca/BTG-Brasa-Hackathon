@@ -1,4 +1,4 @@
-package entity.CreditCard;
+package entity.creditcard;
 
 public class AccountBillsTransactions {
     public String creditCardAccountId;

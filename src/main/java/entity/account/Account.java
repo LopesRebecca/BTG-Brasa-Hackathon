@@ -1,6 +1,11 @@
-package entity.CreditCard;
+package entity.account;
 
-public class AccountBillsLimits {
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Account {
     public String creditCardAccountId;
     public String customerId;
     public String organizationId;

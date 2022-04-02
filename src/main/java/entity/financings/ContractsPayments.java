@@ -1,7 +1,12 @@
 package entity.financings;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 
+@Getter
+@Setter
 public class ContractsPayments {
     public String contractId;
     public String customerId;

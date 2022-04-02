@@ -1,5 +1,10 @@
 package entity.account;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Transations {
     public String accountId;
     public String customerId;

@@ -1,5 +1,10 @@
 package entity.financings;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class ContractsWarranties {
     public String contractId;
     public String customerId;

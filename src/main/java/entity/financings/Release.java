@@ -1,5 +1,10 @@
 package entity.financings;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Release {
     public boolean isOverParcelPayment;
     public String paymentId;

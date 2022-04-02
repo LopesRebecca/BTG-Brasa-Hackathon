@@ -1,5 +1,10 @@
-package entity;
+package entity.Account;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class AccountAccount {
     public String creditCardAccountId;
     public String customerId;

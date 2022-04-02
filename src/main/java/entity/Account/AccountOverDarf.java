@@ -1,4 +1,4 @@
-package entity;
+package entity.Account;
 
 public class AccountOverDarf {
     public String accountId;

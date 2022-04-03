@@ -4,12 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 @Getter
 @Setter
-public class Request<T> {
-    public ArrayList<T> data;
+public class Request {
+    public ArrayList<DataObject> data;
     public Links links;
     public Meta meta;
 

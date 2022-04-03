@@ -2,13 +2,14 @@ package entity.loans;
 
 import java.util.ArrayList;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Contracts {
-    public String contractId;
+	public String contractId;
+    public String contractNumber;
     public String customerId;
     public String organizationId;
     public String organizationName;
-    public String brandName;
-    public String companyCnpj;
     public String ipocCode;
     public String productName;
     public String productType;
@@ -21,6 +22,7 @@ public class Contracts {
     public String instalmentPeriodicity;
     public String instalmentPeriodicityAdditionalInfo;
     public String firstInstalmentDueDate;
+    @JsonProperty("CET") 
     public double cET;
     public String amortizationScheduled;
     public String amortizationScheduledAdditionalInfo;
@@ -28,31 +30,30 @@ public class Contracts {
     public ArrayList<InterestRate> interestRates;
     public ArrayList<ContractedFee> contractedFees;
     public ArrayList<ContractedFinanceCharge> contractedFinanceCharges;
-    public String contractId;
-    public String customerId;
-    public String organizationId;
-    public String organizationName;
-    public String currency;
-    public String warrantyType;
-    public String warrantySubType;
-    public double warrantyAmount;
-    public String contractId;
-    public String customerId;
-    public String organizationId;
-    public String organizationName;
-    public String typeNumberOfInstalments;
-    public int totalNumberOfInstalments;
-    public String typeContractRemaining;
-    public int contractRemainingNumber;
-    public int paidInstalments;
-    public int dueInstalments;
-    public int pastDueInstalments;
-    public Object balloonPayments;
-    public String contractId;
-    public String customerId;
-    public String organizationId;
-    public String organizationName;
-    public int paidInstalments;
-    public double contractOutstandingBalance;
-    public ArrayList<Release> releases;
+    
+	public class InterestRate{
+	    public String taxType;
+	    public String interestRateType;
+	    public String taxPeriodicity;
+	    public String calculation;
+	    public String referentialRateIndexerType;
+	    public double preFixedRate;
+	    public String postFixedRate;
+	    public String additionalInfo;
+	}
+
+	public class ContractedFee{
+	    public String feeName;
+	    public String feeCode;
+	    public String feeChargeType;
+	    public String feeCharge;
+	    public double feeAmount;
+	    public double feeRate;
+	}
+
+	public class ContractedFinanceCharge{
+	    public String chargeType;
+	    public String chargeAdditionalInfo;
+	    public double chargeRate;
+	}
 }

@@ -1,11 +1,12 @@
 package entity.account;
 
+import entity.DataObject;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Account {
+public class Account extends DataObject {
     public String creditCardAccountId;
     public String customerId;
     public String organizationId;

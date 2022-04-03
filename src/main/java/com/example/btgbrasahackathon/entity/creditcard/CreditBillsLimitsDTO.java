@@ -1,6 +1,7 @@
 package com.example.btgbrasahackathon.entity.creditcard;
 
 public class CreditBillsLimitsDTO {
+	
     private String creditCardAccountId;
     private String customerId;
     private String organizationId;

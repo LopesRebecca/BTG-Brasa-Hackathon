@@ -8,21 +8,18 @@ public class IncreaseResponse {
     private Double oldLimit;
     private Date dateRequest;
     private Double increase;
-    private Double availableAmount;
-    private Double billTotalAmount;
+    private String message;
 
     public IncreaseResponse() {
     }
 
     public IncreaseResponse(String customerId, Double newLimit, Double oldLimit,
-                            Date dateRequest, Double availableAmount, Double billTotalAmount) {
+                            Date dateRequest) {
         this.customerId = customerId;
         this.newLimit = newLimit;
         this.oldLimit = oldLimit;
         this.dateRequest = dateRequest;
         this.increase = newLimit - oldLimit;
-        this.availableAmount = availableAmount;
-        this.billTotalAmount = billTotalAmount;
     }
 
     public String getCustomerId() {
@@ -65,19 +62,11 @@ public class IncreaseResponse {
         this.increase = increase;
     }
 
-    public Double getAvailableAmount() {
-        return availableAmount;
-    }
+	public String getMessage() {
+		return message;
+	}
 
-    public void setAvailableAmount(Double availableAmount) {
-        this.availableAmount = availableAmount;
-    }
-
-    public Double getBillTotalAmount() {
-        return billTotalAmount;
-    }
-
-    public void setBillTotalAmount(Double billTotalAmount) {
-        this.billTotalAmount = billTotalAmount;
-    }
+	public void setMessage(String message) {
+		this.message = message;
+	}
 }

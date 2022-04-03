@@ -1,27 +1,29 @@
 package com.example.btgbrasahackathon.entity.account;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.example.btgbrasahackathon.entity.Links;
+import com.example.btgbrasahackathon.entity.Meta;
 
-@Getter
-@Setter
 public class Transations {
-    public String accountId;
-    public String customerId;
-    public String organizationId;
-    public String organizationName;
-    public String transactionId;
-    public String completedAuthorisedPaymentType;
-    public String creditDebitType;
-    public String transactionName;
-    public String type;
-    public double amount;
-    public String transactionCurrency;
-    public String transactionDate;
-    public String partieCnpjCpf;
-    public String partiePersonType;
-    public String partieCompeCode;
-    public String partieBranchCode;
-    public String partieNumber;
-    public String partieCheckDigit;
+	private TransationsDTO data;
+    private Links links;
+    private Meta meta;
+    
+	public TransationsDTO getData() {
+		return data;
+	}
+	public void setData(TransationsDTO data) {
+		this.data = data;
+	}
+	public Links getLinks() {
+		return links;
+	}
+	public void setLinks(Links links) {
+		this.links = links;
+	}
+	public Meta getMeta() {
+		return meta;
+	}
+	public void setMeta(Meta meta) {
+		this.meta = meta;
+	}
 }

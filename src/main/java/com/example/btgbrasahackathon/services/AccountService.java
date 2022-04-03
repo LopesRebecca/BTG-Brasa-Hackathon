@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import com.example.btgbrasahackathon.entity.account.Account;
 import com.example.btgbrasahackathon.entity.account.Balances;
 import com.example.btgbrasahackathon.entity.account.OverDraft;
+import com.example.btgbrasahackathon.entity.account.Transations;
 
 @Service
 public class AccountService {
@@ -59,6 +60,22 @@ public class AccountService {
 
 		ResponseEntity<OverDraft> response = restTemplate.exchange(url, HttpMethod.GET,
 				new HttpEntity<Object>("",headers), OverDraft.class);
+		
+		return response.getBody();	
+	}
+	
+	public Transations queryTransactions(String organizationId, String customerId, String accountId) {
+		String url = "https://challenge.hackathonbtg.com/accounts/v1/accounts/" + accountId + "/transactions";
+		
+		RestTemplate restTemplate = new RestTemplate();
+		HttpHeaders headers = new HttpHeaders();
+		
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		headers.add("organizationid", organizationId);
+		headers.add("customerid", customerId);
+
+		ResponseEntity<Transations> response = restTemplate.exchange(url, HttpMethod.GET,
+				new HttpEntity<Object>("",headers), Transations.class);
 		
 		return response.getBody();
 	}

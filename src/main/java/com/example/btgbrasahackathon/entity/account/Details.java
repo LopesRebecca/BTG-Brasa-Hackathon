@@ -1,12 +1,11 @@
 package com.example.btgbrasahackathon.entity.account;
 
-import com.example.btgbrasahackathon.entity.DataObject;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Details extends DataObject{
+public class Details{
     public String accountId;
     public String customerId;
     public String organizationId;

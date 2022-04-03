@@ -8,12 +8,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.example.btgbrasahackathon.entity.Request;
+import com.example.btgbrasahackathon.entity.account.Account;
+import com.example.btgbrasahackathon.entity.account.Balances;
 
 @Service
 public class AccountService {
 	
-	public Request queryAccount(String organizationId, String customerId){
+	public Account queryAccount(String organizationId, String customerId){
 		String url = "https://challenge.hackathonbtg.com/credit-cards-accounts/v1/accounts";
 		
 		RestTemplate restTemplate = new RestTemplate();
@@ -22,9 +23,25 @@ public class AccountService {
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		headers.add("organizationid", organizationId);
 		headers.add("customerid", customerId);
-		System.out.print(123);
-		ResponseEntity<Request> response = restTemplate.exchange(url, HttpMethod.GET,
-				new HttpEntity<Object>("",headers), Request.class);
+
+		ResponseEntity<Account> response = restTemplate.exchange(url, HttpMethod.GET,
+				new HttpEntity<Object>("",headers), Account.class);
+		
+		return response.getBody();
+	}
+	
+	public Balances queryBalance(String organizationId, String customerId, String accountId) {
+		String url = "https://challenge.hackathonbtg.com/accounts/v1/accounts/" + accountId + "/balances";
+		
+		RestTemplate restTemplate = new RestTemplate();
+		HttpHeaders headers = new HttpHeaders();
+		
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		headers.add("organizationid", organizationId);
+		headers.add("customerid", customerId);
+
+		ResponseEntity<Balances> response = restTemplate.exchange(url, HttpMethod.GET,
+				new HttpEntity<Object>("",headers), Balances.class);
 		
 		return response.getBody();
 	}

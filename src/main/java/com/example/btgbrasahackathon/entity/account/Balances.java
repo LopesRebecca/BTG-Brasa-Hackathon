@@ -1,20 +1,29 @@
 package com.example.btgbrasahackathon.entity.account;
 
-import com.example.btgbrasahackathon.entity.DataObject;
-import lombok.Getter;
-import lombok.Setter;
+import com.example.btgbrasahackathon.entity.Links;
+import com.example.btgbrasahackathon.entity.Meta;
 
-@Getter
-@Setter
-public class Balances extends DataObject{
-    public String accountId;
-    public String customerId;
-    public String organizationId;
-    public String organizationName;
-    public double availableAmount;
-    public String availableAmountCurrency;
-    public int blockedAmount;
-    public String blockedAmountCurrency;
-    public int automaticallyInvestedAmount;
-    public String automaticallyInvestedAmountCurrency;
+public class Balances{
+	private BalancesDTO data;
+    private Meta meta;
+    private Links links;
+    
+	public BalancesDTO getData() {
+		return data;
+	}
+	public void setData(BalancesDTO data) {
+		this.data = data;
+	}
+	public Meta getMeta() {
+		return meta;
+	}
+	public void setMeta(Meta meta) {
+		this.meta = meta;
+	}
+	public Links getLinks() {
+		return links;
+	}
+	public void setLinks(Links links) {
+		this.links = links;
+	}
 }

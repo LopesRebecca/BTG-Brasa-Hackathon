@@ -1,24 +1,38 @@
 package com.example.btgbrasahackathon.entity.account;
 
-import com.example.btgbrasahackathon.entity.DataObject;
-import lombok.Getter;
-import lombok.Setter;
+import java.util.ArrayList;
 
-@Getter
-@Setter
-public class Account extends DataObject {
-    public String creditCardAccountId;
-    public String customerId;
-    public String organizationId;
-    public String organizationName;
-    public String creditLineLimitType;
-    public String consolidationType;
-    public String identificationNumber;
-    public boolean isLimitFlexible;
-    public String limitAmountCurrency;
-    public double limitAmount;
-    public String usedAmountCurrency;
-    public double usedAmount;
-    public String availableAmountCurrency;
-    public double availableAmount;
+import com.example.btgbrasahackathon.entity.Links;
+import com.example.btgbrasahackathon.entity.Meta;
+
+public class Account{
+	private ArrayList<AccountDTO> data;
+    private Links links;
+    private Meta meta;
+    
+    public Account(){}
+    
+	public ArrayList<AccountDTO> getData() {
+		return data;
+	}
+
+	public void setData(ArrayList<AccountDTO> data) {
+		this.data = data;
+	}
+
+	public Meta getMeta() {
+		return meta;
+	}
+
+	public void setMeta(Meta meta) {
+		this.meta = meta;
+	}
+
+	public Links getLinks() {
+		return links;
+	}
+
+	public void setLinks(Links links) {
+		this.links = links;
+	}
 }

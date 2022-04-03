@@ -3,8 +3,7 @@ package com.example.btgbrasahackathon.entity.creditcard;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+
 public class AccountBillsTransactions {
     public String creditCardAccountId;
     public String customerId;

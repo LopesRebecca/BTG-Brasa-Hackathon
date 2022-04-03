@@ -1,14 +1,28 @@
 package com.example.btgbrasahackathon.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.util.Date;
 
-@Getter
-@Setter
 public class Meta {
-    public int totalRecords;
-    public int totalPages;
-    public Date requestDateTime;
+    private int totalRecords;
+    private int totalPages;
+    private Date requestDateTime;
+    
+	public int getTotalPages() {
+		return totalPages;
+	}
+	public void setTotalPages(int totalPages) {
+		this.totalPages = totalPages;
+	}
+	public int getTotalRecords() {
+		return totalRecords;
+	}
+	public void setTotalRecords(int totalRecords) {
+		this.totalRecords = totalRecords;
+	}
+	public Date getRequestDateTime() {
+		return requestDateTime;
+	}
+	public void setRequestDateTime(Date requestDateTime) {
+		this.requestDateTime = requestDateTime;
+	}
 }

@@ -13,7 +13,7 @@ Nosso produto visa ofertar de forma automática e inteligente uma nova linha de 
 Buscando por meio de suas transações mensais no cartão de credito, e usufruindo do OpenFinace a nossa solução irá fornecer créditos mais altos para clientes BTG. 
 
 ## Sobre aplicação
-## Informações tecnicas 
+### Informações tecnicas 
 * Sistema Operacional - Linux, Windows, MacOs
 * Linguagem Utilizadas
     * Back end - Git e Java, para esse algoritmo foi utilizado o java 11.11.0
@@ -38,7 +38,7 @@ Na requisição tem que ser passado no body:
     
 }
 ```
-<!--<img src = "https://github.com/LopesRebecca/BTG-Brasa-Hackathon/blob/main/brasa-BTG/body.jpeg" width="800"> -->
+<img src = "https://github.com/LopesRebecca/BTG-Brasa-Hackathon/blob/main/brasa-BTG/body.jpeg" width="800"> 
 
 Sendo, 
   * organizationId - Id da organização
@@ -49,7 +49,7 @@ Já na parte do head deve ser passado os seguintes dados:
    * acoountId - Id da conta do cliente
 <img src = "https://github.com/LopesRebecca/BTG-Brasa-Hackathon/blob/main/brasa-BTG/head.jpeg" width="800">
 
-* Dados ilustrativos
+* Dados ilustrativos, insira os dados referente ao cliente que deseja consultar 
 
 ## Descrição do criterio
 Para ser aprovado o crédito o cliente precisa seguir as seguintes inposições:
@@ -58,9 +58,10 @@ Para ser aprovado o crédito o cliente precisa seguir as seguintes inposições:
    *  cartão de crédito como meio principal de pagamento 
    *  não pode está utilizando cheque especial
    *  não pode execeder o valor de gastos em relação ao valor minimo de crédito 
-   *  
+   
 Depois de aprovado na aplicação para considerar um aumento razoavel de crédito foi armazenado em uma lista todos os limites de crédito referente aquele cliente, 
 feito uma comparação e então acrescentado 25% do maior limite disponivel dele.
+
 ```
 AumentoCredito = maiorCreditoCliente + (maiorCreditoCliente * 0.25).
 ```
@@ -74,6 +75,24 @@ AumentoCredito = maiorCreditoCliente + (maiorCreditoCliente * 0.25).
 2. Caso triste 
    O crédito para o cliente foi reprovado 
    <img src = "https://github.com/LopesRebecca/BTG-Brasa-Hackathon/blob/main/brasa-BTG/resultNegado.jpeg" width="800">
+   
+# Possiveis melhorias:
+Para uma segunda versão da aplicação pensa se em ser considerado beneficios para clientes com uma linha de crédito maior, como
+o cashback e anuidade gratuita
+
+# Desenvolvedores
+
+## Membros
+ [<img src = "https://avatars.githubusercontent.com/u/62263916?v=4" width="115"><br><sub>Eriky Ryan</sub>](https://github.com/erikyryan) 
+ 
+ [<img src = "https://avatars.githubusercontent.com/u/57471802?v=4" width="115"><br><sub>Davi Fernandes</sub>](https://github.com/Davizex)
+ 
+ [<img src = "https://avatars.githubusercontent.com/u/82542224?v=4" width="115"><br><sub>Rebecca Lelis</sub>](https://github.com/LopesRebecca)
+
+
+## Licença
+
+licenciado sob [MIT](https://github.com/erikyryan/trabalho-de-poo/blob/main/LICENSE)
    
 
 

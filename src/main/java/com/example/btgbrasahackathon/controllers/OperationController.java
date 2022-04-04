@@ -22,8 +22,9 @@ public class OperationController {
 	
 	@PostMapping("/credit")
 	public ResponseEntity<?> creditIncrease(@RequestHeader("customerid") String customerId,
+			@RequestHeader("accountId") String accountId,
 			@RequestBody CustomerProposal organizations){
-		IncreaseResponse response = this.operationService.increaseCredit(customerId, organizations);
+		IncreaseResponse response = this.operationService.increaseCredit(customerId, organizations, accountId);
 		return ResponseEntity.status(HttpStatus.CREATED).body(response);
 	}
 	

@@ -64,8 +64,8 @@ public class AccountService {
 		return response.getBody();	
 	}
 	
-	public Transations queryTransactions(String organizationId, String customerId, String accountId) {
-		String url = "https://challenge.hackathonbtg.com/accounts/v1/accounts/" + accountId + "/transactions";
+	public Transations queryTransactions(String organizationId, String customerId, String CreditCardAccountId) {
+		String url = "https://challenge.hackathonbtg.com/accounts/v1/accounts/" + CreditCardAccountId + "/transactions";
 		
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();

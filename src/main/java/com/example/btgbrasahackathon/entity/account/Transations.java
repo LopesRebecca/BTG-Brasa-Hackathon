@@ -1,17 +1,19 @@
 package com.example.btgbrasahackathon.entity.account;
 
+import java.util.ArrayList;
+
 import com.example.btgbrasahackathon.entity.Links;
 import com.example.btgbrasahackathon.entity.Meta;
 
 public class Transations {
-	private TransationsDTO data;
+	private ArrayList<TransationsDTO> data;
     private Links links;
     private Meta meta;
     
-	public TransationsDTO getData() {
+	public ArrayList<TransationsDTO> getData() {
 		return data;
 	}
-	public void setData(TransationsDTO data) {
+	public void setData(ArrayList<TransationsDTO> data) {
 		this.data = data;
 	}
 	public Links getLinks() {

@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import com.example.btgbrasahackathon.entity.creditcard.AccountBill;
 import com.example.btgbrasahackathon.entity.creditcard.CreditAccount;
 import com.example.btgbrasahackathon.entity.creditcard.CreditCardAccountId;
+import com.example.btgbrasahackathon.entity.creditcard.CreditLimits;
 import com.example.btgbrasahackathon.entity.creditcard.CreditTransations;
 
 @Service
@@ -76,6 +77,22 @@ public class CreditService {
 
 		ResponseEntity<AccountBill> response = restTemplate.exchange(url, HttpMethod.GET,
 				new HttpEntity<Object>("",headers), AccountBill.class);
+		
+		return response.getBody();
+	}
+	
+	public CreditLimits queryLimits(String organizationId, String customerId, String creditCardAccountId){
+		String url = "https://challenge.hackathonbtg.com/credit-cards-accounts/v1/accounts/" + creditCardAccountId + "/limits" ;
+		
+		RestTemplate restTemplate = new RestTemplate();
+		HttpHeaders headers = new HttpHeaders();
+		
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		headers.add("organizationid", organizationId);
+		headers.add("customerid", customerId);
+
+		ResponseEntity<CreditLimits> response = restTemplate.exchange(url, HttpMethod.GET,
+				new HttpEntity<Object>("",headers), CreditLimits.class);
 		
 		return response.getBody();
 	}

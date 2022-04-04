@@ -5,17 +5,11 @@ import java.util.ArrayList;
 import com.example.btgbrasahackathon.entity.Links;
 import com.example.btgbrasahackathon.entity.Meta;
 
-public class CreditTransations {
-	private ArrayList<CreditTransationsDTO> data;
+public class CreditLimits {
+	private ArrayList<CreditBillsLimitsDTO> data;
     private Links links;
     private Meta meta;
     
-	public ArrayList<CreditTransationsDTO> getData() {
-		return data;
-	}
-	public void setData(ArrayList<CreditTransationsDTO> data) {
-		this.data = data;
-	}
 	public Links getLinks() {
 		return links;
 	}
@@ -27,5 +21,11 @@ public class CreditTransations {
 	}
 	public void setMeta(Meta meta) {
 		this.meta = meta;
+	}
+	public ArrayList<CreditBillsLimitsDTO> getData() {
+		return data;
+	}
+	public void setData(ArrayList<CreditBillsLimitsDTO> data) {
+		this.data = data;
 	}
 }

@@ -12,6 +12,7 @@ public class BalancesDTO {
     private int automaticallyInvestedAmount;
     private String automaticallyInvestedAmountCurrency;
     
+    
 	public String getAccountId() {
 		return accountId;
 	}

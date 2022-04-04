@@ -1,11 +1,13 @@
 package com.example.btgbrasahackathon.entity.creditcard;
 
+import java.util.ArrayList;
+
 import com.example.btgbrasahackathon.entity.Links;
 import com.example.btgbrasahackathon.entity.Meta;
 
 public class CreditCardAccountId {
 	
-	private CreditCardDTO data;
+	private ArrayList<CreditCardDTO> data;
     private Links links;
     private Meta meta;
     
@@ -21,10 +23,10 @@ public class CreditCardAccountId {
 	public void setMeta(Meta meta) {
 		this.meta = meta;
 	}
-	public CreditCardDTO getData() {
+	public ArrayList<CreditCardDTO> getData() {
 		return data;
 	}
-	public void setData(CreditCardDTO data) {
+	public void setData(ArrayList<CreditCardDTO> data) {
 		this.data = data;
 	}
     

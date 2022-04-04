@@ -38,18 +38,28 @@ Na requisição tem que ser passado no body:
     
 }
 ```
-<img src = "https://github.com/LopesRebecca/Analisadores/blob/main/testes/Captura%20de%20tela_2022-01-07_22-53-13.png" width="800">
+<!--<img src = "https://github.com/LopesRebecca/BTG-Brasa-Hackathon/blob/main/brasa-BTG/body.jpeg" width="800"> -->
 
 Sendo, 
   * organizationId - Id da organização
   * creditCardAccountId - Id referente a parte do crédito do cliente
 
 Já na parte do head deve ser passado os seguintes dados:
+   * customerId - Id do cliente (CPF OU CNPJ)
+   * acoountId - Id da conta do cliente
+<img src = "https://github.com/LopesRebecca/BTG-Brasa-Hackathon/blob/main/brasa-BTG/head.jpeg" width="800">
 
 * Dados ilustrativos
 
-## Formula matematica utilizada 
-Nessa aplicação para considerar um aumento razoavel de crédito foi armazenado em uma lista todos os limites de crédito referente aquele cliente, 
+## Descrição do criterio
+Para ser aprovado o crédito o cliente precisa seguir as seguintes inposições:
+   *  deve ter saldo positivo
+   *  não pode ter dinheiro bloqueado em conta
+   *  cartão de crédito como meio principal de pagamento 
+   *  não pode está utilizando cheque especial
+   *  não pode execeder o valor de gastos em relação ao valor minimo de crédito 
+   *  
+Depois de aprovado na aplicação para considerar um aumento razoavel de crédito foi armazenado em uma lista todos os limites de crédito referente aquele cliente, 
 feito uma comparação e então acrescentado 25% do maior limite disponivel dele.
 ```
 AumentoCredito = maiorCreditoCliente + (maiorCreditoCliente * 0.25).
@@ -57,6 +67,14 @@ AumentoCredito = maiorCreditoCliente + (maiorCreditoCliente * 0.25).
 
 ## Resultado dos testes
 
+1. Caso feliz 
+   O crédito para o cliente foi aprovado e aumentado
+   <img src = "https://github.com/LopesRebecca/BTG-Brasa-Hackathon/blob/main/brasa-BTG/resultAprovado.jpeg" width="700">
+
+2. Caso triste 
+   O crédito para o cliente foi reprovado 
+   <img src = "https://github.com/LopesRebecca/BTG-Brasa-Hackathon/blob/main/brasa-BTG/resultNegado.jpeg" width="800">
+   
 
 
 

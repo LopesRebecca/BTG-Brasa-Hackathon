@@ -52,7 +52,7 @@ Já na parte do head deve ser passado os seguintes dados:
 Nessa aplicação para considerar um aumento razoavel de crédito foi armazenado em uma lista todos os limites de crédito referente aquele cliente, 
 feito uma comparação e então acrescentado 25% do maior limite disponivel dele.
 ```
-AumentoCredito = maiorCreditoCliente + (maiorCreditoCliente0.25).
+AumentoCredito = maiorCreditoCliente + (maiorCreditoCliente * 0.25).
 ```
 
 ## Resultado dos testes

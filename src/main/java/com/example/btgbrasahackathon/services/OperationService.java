@@ -34,17 +34,18 @@ public class OperationService {
 	public IncreaseResponse increaseCredit(String customerId, CustomerProposal organizations, String accountId) {
 		try {
 			//validations
-			if(isAvaliableAmount(customerId, organizations, accountId)) {
-				throw new DeniedCreditException("Denied1");
+			if(isAvaliableAmount(customerId, organizations)) {
+				throw new DeniedCreditException("Saldo insuficiente para realizar um aumento de crédito");
 			}
 			if(isValidBillingAmount(customerId, organizations)) {
-				throw new DeniedCreditException("Denied2");
+				throw new DeniedCreditException("Despesas altas ou incorente para que haja um aumento de crédito");
 			}
-			if(isUsedOverDraft(customerId, organizations, accountId)){
-				throw new DeniedCreditException("Denied3");
+
+			if(isUsedOverDraft(customerId, organizations)){
+				throw new DeniedCreditException("Problemas com o cheque especial");
 			}
-			if(isUsedEnoughCreditCard(customerId, organizations, accountId)) {
-				throw new DeniedCreditException("Denied4");
+			if(isUsedEnoughCreditCard(customerId, organizations)) {
+				throw new DeniedCreditException("Baixo uso do cartão de crédito, impossibilita um aumento de crédito");
 			}
 			
 			//creditCalculation
